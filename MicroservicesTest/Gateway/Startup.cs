@@ -35,7 +35,7 @@ namespace Gateway {
             Router router = new Router(routes.Value, authenticationService.Value);
             app.UseEndpoints(endpoints => {
                 endpoints.MapGet("/", async context => {
-                    await context.Response.WriteAsync("Hello World!");
+                    await context.Response.WriteAsync("Welcome To Demo Api Gateway");
                 });
 
                 if (router.Routes.Count > 0) {
